@@ -11,6 +11,8 @@
 
 set $mod Mod4
 
+#path to eww bar directory
+set $eww "~/aur/eww/target/release/eww "
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
@@ -75,6 +77,8 @@ bindsym $mod+F1 exec setxkbmap -model abnt2 -layout br -variant abnt2 && notify-
 #change the layout to colemakhd us
 bindsym $mod+F2 exec setxkbmap -model abnt2 -layout br -variant colemakbr   && notify-send "Keyboard set to ColemakHd" 
 
+#close all eww windows useful for debuging
+bindsym $mod+F12 exec ~/aur/eww/target/release/eww close-all 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -274,7 +278,7 @@ bindsym $mod+Shift+z exec thunar
 # exec firefox
 #Disable the warnings songs
 exec xset b off 
-exec_always feh --bg-scale ~/Pictures/Wallpapers/yatsuba-0.png
+exec_always feh --bg-scale ~/Pictures/Wallpapers/simple.jpg
 #Will reloads the polybar when the files was saved
 # exec --no-startup-id polybar exec -r
 #comand to kill the polybar
